@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test-h5</title>
+
+	<!--基本资源库-->
+	<script src='../js/H5ComponentBase.js'></script>
+	<script src='../js/lib/jquery.js'></script>
+	<script src='../js/lib/jquery-ui.min.js'></script>
+	<script src='../js/lib/jquery.fullpage.js'></script>
+	<!--H5对象资源和管理内容：页-组件-->
+	<script src="../js/H5.js"></script>
+	<link rel="stylesheet" text='text/css' href="../css/H5.css">
+	<script src='../js/H5ComponentBase.js'></script>
+	<link rel="stylesheet" href="../css/H5ComponentBase.css">
+</head>
+<body>
+	<!-- 用于验证内容组织功能，以及fullpage页面和组件切换 -->
+	<script>
+		$(function(){
+			var h5 = new H5();
+				h5.addPage('face','首页')
+					.addComponent('logo',{text:'logo'})
+					.addComponent('slogo',{text:'slogo'})
+				h5.addPage('desc','核心理念页')
+					.addComponent('caption',{text:'核心理念'})
+				h5.addPage('page-3','课程分布方向页')
+					.addComponent('caption',{text:'课程分布'})
+				.loader()
+		})
+	</script>
+</body>
+</html>

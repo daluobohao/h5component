@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>leetcode_problem</title>
+</head>
+<body>
+	<script>
+	var nextGreaterElement = function(findNums, nums) {
+		    var resArray = [];
+		    findNums.sort();
+		    nums.sort();
+		    var lenOffindNums = findNums.length;
+		    var lenOfnums = nums.length;
+		    for (var i = 0; i < lenOffindNums; i++){
+		    	console.log(findNums[i]);
+		    	console.log(nums.indexOf(findNums[i]));
+		        if (nums.indexOf(findNums[i]) < lenOfnums ){
+		            resArray.push(nums[nums.indexOf(findNums[i])+1]);
+		        }
+		        else{
+		            resArray.push(-1);
+		        }
+		    }
+		    return resArray;
+		};
+	var arr1 = [4,1,2];
+	var arr2 = [1,3,4,2];
+	var res = nextGreaterElement(arr1,arr2);
+	console.log(res);
+	</script>
+</body>
+</html>
